@@ -1,0 +1,27 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "<h4 align=\"center\"> \r \t🚧 NextLevelWeek 1.0 🚀 em construção... 🚧\r </h4>",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krouzen/nlw.git"
+  },
+  "keywords": [],
+  "author": "Gabriel Belo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Krouzen/nlw/issues"
+  },
+  "homepage": "https://github.com/Krouzen/nlw#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
