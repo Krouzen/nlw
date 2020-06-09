@@ -13,29 +13,29 @@
 {% block content %}
     {% include "partials/page-header.html"%}
     <main>
-        <h4>
-            <strong>2 pontos</strong>
+    {% if total>0 %}
+     <h4>
+            <strong>{{total}}</strong>
             encontrados
         </h4>
         <div class="cards">
-            <div class="card">
-                <img src="" alt="Colectoria"/>
-                <h1>Colectoria</h1>
-                <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-                <p>Rua ....<br/>
-                    aaaaa<br/>
-                    bbbbb
+        {% for place in places %}
+         <div class="card">
+                <img src="{{place.image}}" alt="{{place.name}}"/>
+                <h1>{{place.name}}</h1>
+                <h3>{{place.items}}</h3>
+                <p>{{place.city}},{{place.state}}
+                <br/>
+                    {{place.adress}}
+                    <br/>
+                    {{place.adress2}}
                 </p>
             </div>
-            <div class="card">
-                <img src="" alt="Papersider">
-                <h1>Papersider</h1>
-                <h3>Papeis e Papelão</h3>
-                <p>Rua ....<br/>
-                    aaaaa<br/>
-                    bbbbb
-                </p>
-            </div>
+        {% endfor %}
         </div>
+        {%else%}
+        <h4><strong>Nenhum</strong> local encontrado</h4>
+    {% endif %}
+       
     </main>
 {% endblock content %}
